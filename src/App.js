@@ -51,6 +51,9 @@ const StyledSection = styled.div`
   height: 20rem;
   background: red;
   border: 5px solid black;
+  transform(1,1);
+  -webkit-transition: transform .5s;
+  transition: transform .5s;
   :hover {
     transform: scale(1.5,1.5);
     -webkit-transition: transform .5s;
