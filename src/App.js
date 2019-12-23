@@ -6,18 +6,20 @@ function App() {
     <OuterWrap>
       <MainWrap>
         <StyledRow>
-          <StyledSection sm="12" lg="6">
+          <StyledSection>
             Money
           </StyledSection>
-          <StyledSection sm="12" lg="6">
+          <Spacer />
+          <StyledSection>
             Calories
           </StyledSection>
         </StyledRow>
         <StyledRow>
-          <StyledSection sm="12" lg="6">
+          <StyledSection>
             Goals
           </StyledSection>
-          <StyledSection sm="12" lg="6">
+          <Spacer />
+          <StyledSection>
             Fun
           </StyledSection>
         </StyledRow>
@@ -47,16 +49,22 @@ const StyledRow = styled.div`
 `
 
 const StyledSection = styled.div`
-  width: 30vw;
+  position: relative;
+  width: 90%;
   height: 20rem;
+  padding-bottom: .5rem;
   background: red;
   border: 5px solid black;
   transform(1,1);
   -webkit-transition: transform .5s;
   transition: transform .5s;
   :hover {
-    transform: scale(1.5,1.5);
+    transform: scale(1.1,1.2);
     -webkit-transition: transform .5s;
     transition: transform .5s;
   }
+`
+
+const Spacer = styled.div`
+  width: 5rem;
 `
