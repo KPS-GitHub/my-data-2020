@@ -60,7 +60,3 @@ const StyledSection = styled.a`
     transition: transform .5s;
   }
 `
-
-const Spacer = styled.div`
-  width: 5rem;
-`
