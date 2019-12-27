@@ -1,17 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import MoneyGraphs from './MoneyGraphs';
-import MoneyInputs from './MoneyInputs';
+import Budget from './Budget/Budget';
+import Savings from './Savings/Savings';
 
 const MoneyPage = () => {
   return (
     <PageWrap>
-      <div>
-        <MoneyGraphs />
-      </div>
-      <div>
-        <MoneyInputs />
-      </div>
+      <Budget />
+      <Savings />
     </PageWrap>
   );
 }
@@ -20,5 +16,6 @@ export default MoneyPage;
 
 
 const PageWrap = styled.div`
-  margin: 10%;
+  margin: 5%;
+  width: 100%;
 `
