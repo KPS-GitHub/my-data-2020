@@ -29,6 +29,12 @@ class Budget extends React.Component {
       })
   }
 
+  budgetUpdate = (newBudget) => {
+    axios.put('https://mydata-822b0.firebaseio.com/Money/Budget/monthlyBudget.json', newBudget)
+      .then(response => console.log("response from axios post for budget total", response))
+      .catch (error => console.log(error));
+  }
+
   render() {
     return(
       <SectionWrap>
@@ -38,7 +44,7 @@ class Budget extends React.Component {
           <BudgetStats />
         </RowWrap>
         <RowWrap>
-          <BudgetInputs />
+          <BudgetInputs budgetUpdate={this.budgetUpdate} />
         </RowWrap>
       </SectionWrap>
     )
