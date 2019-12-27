@@ -32,8 +32,9 @@ class Budget extends React.Component {
   render() {
     return(
       <SectionWrap>
+        Monthly Budget: ${this.state.monthlyBudget}
         <RowWrap>
-          <BudgetGraph />
+          <BudgetGraph data={this.state} />
           <BudgetStats />
         </RowWrap>
         <RowWrap>
