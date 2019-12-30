@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const pages = ["Money", "Calories", "Goals", "Fun"];
 
@@ -10,7 +11,7 @@ const Home = () => {
         <StyledRow>
           {pages.map(page => {
             return(
-              <StyledSection href={`/`+page}>
+              <StyledSection to={`/`+page}>
                   {page}
               </StyledSection>
             );
@@ -41,7 +42,7 @@ const StyledRow = styled.div`
   margin-bottom: 50px;
 `
 
-const StyledSection = styled.a`
+const StyledSection = styled(Link)`
   position: relative;
   width: 90%;
   height: 20rem;
